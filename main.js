@@ -1,14 +1,13 @@
 /* =========================================================
    Pile Oussou — réglages de la page
-   ⚠️ VALEURS PROVISOIRES : à remplacer avec les infos du client.
    Tout le site se met à jour à partir de ces lignes.
    ========================================================= */
 const CONFIG = {
-  // Numéro WhatsApp au format international, sans "+" ni espaces (Mali = 223 + 8 chiffres).
-  whatsapp: "22300000000",
+  // Numéro WhatsApp de Miya (commandes), format international sans "+" ni espaces.
+  whatsapp: "22391026406",
   // Prix d'un pack, en FCFA.
-  prix: 25000,
-  // Nombre de piles dans le pack (le texte du client dit 4, la boîte en montre 8 : à confirmer).
+  prix: 20000,
+  // Nombre de piles dans le pack (4 d'après le client, Miya doit le reconfirmer).
   nbPiles: 4,
   // Nom du produit tel qu'il apparaît dans le message WhatsApp.
   produit: "Pack boîtier de charge USB-C + piles AA rechargeables",
