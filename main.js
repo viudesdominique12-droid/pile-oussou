@@ -250,17 +250,19 @@ const CONFIG = {
     });
   }
   const photos = $$(".features__frame .panel");
-  const points = $$(".features__dots li");
+  const points = $$(".features__dots li, .swipe-hint__dots li");
+  const nbPoints = Math.max(1, avantages.length);
   function activer(i) {
     avantages.forEach((el, k) => el.classList.toggle("is-active", k === i));
     photos.forEach((el, k) => el.classList.toggle("is-active", k === i));
-    points.forEach((el, k) => el.classList.toggle("is-active", k === i));
+    points.forEach((el, k) => el.classList.toggle("is-active", k % nbPoints === i));
   }
-  // L'avantage actif est celui qui passe au milieu de l'écran (calcul au scroll,
+  const ordinateur = window.matchMedia("(min-width: 960px)");
+  // Ordinateur : l'avantage actif est celui qui passe au milieu de l'écran (calcul au scroll,
   // plus fiable qu'un IntersectionObserver quand la page est affichée dans un cadre).
   let actif = 0;
   function suivreAvantages() {
-    if (!avantages.length) return;
+    if (!avantages.length || !ordinateur.matches) return;
     const milieu = window.innerHeight / 2;
     let meilleur = actif, distMin = Infinity;
     avantages.forEach((el, k) => {
@@ -273,4 +275,43 @@ const CONFIG = {
   window.addEventListener("scroll", () => requestAnimationFrame(suivreAvantages), { passive: true });
   window.addEventListener("resize", suivreAvantages);
   suivreAvantages();
+
+  // Téléphone : carrousel à faire glisser, l'avantage actif suit la carte affichée.
+  const carrousel = $("#features-list");
+  if (carrousel) {
+    let tickC = false;
+    carrousel.addEventListener("scroll", () => {
+      if (tickC || ordinateur.matches) return;
+      tickC = true;
+      requestAnimationFrame(() => {
+        tickC = false;
+        const carte = avantages[0].getBoundingClientRect().width + 12;
+        const i = Math.min(avantages.length - 1, Math.max(0, Math.round(carrousel.scrollLeft / carte)));
+        if (i !== actif) { actif = i; activer(i); }
+      });
+    }, { passive: true });
+  }
+
+  /* ---------- Menu plein écran (téléphone) ---------- */
+  const boutonMenu = $("#menu-btn");
+  const menu = $("#menu");
+  if (boutonMenu && menu) {
+    const fermer = () => {
+      menu.hidden = true;
+      boutonMenu.setAttribute("aria-expanded", "false");
+      boutonMenu.textContent = "Menu";
+      document.body.style.overflow = "";
+    };
+    boutonMenu.addEventListener("click", () => {
+      const ouvrir = menu.hidden;
+      menu.hidden = !ouvrir;
+      boutonMenu.setAttribute("aria-expanded", String(ouvrir));
+      boutonMenu.textContent = ouvrir ? "Fermer" : "Menu";
+      document.body.style.overflow = ouvrir ? "hidden" : "";
+      if (ouvrir) menu.querySelector("a").focus();
+    });
+    menu.addEventListener("click", (e) => { if (e.target.closest("a")) fermer(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !menu.hidden) { fermer(); boutonMenu.focus(); } });
+    ordinateur.addEventListener("change", (e) => { if (e.matches) fermer(); });
+  }
 })();
