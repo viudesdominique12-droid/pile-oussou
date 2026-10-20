@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600;800&display=swap">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=4">
   <script>
     // Active les animations ; si main.js ne se charge pas, on réaffiche tout.
     document.documentElement.classList.add("js");
@@ -116,7 +116,7 @@
     </div>
   </section>
 
-  <!-- ============ LE PRODUIT (photo fixe + avantages qui défilent) ============ -->
+  <!-- ============ LE PRODUIT (visuel fixe + avantages qui défilent) ============ -->
   <section id="produit" class="section features">
     <div class="container">
       <div class="section-head" data-reveal>
@@ -125,38 +125,94 @@
       </div>
 
       <div class="features__layout">
+        <!-- Sur ordinateur, main.js recopie ici les visuels des avantages -->
         <div class="features__visual" aria-hidden="true">
-          <div class="features__frame">
-            <img class="is-active" data-feature-img="0" src="img/pack-complet.webp" width="800" height="800" loading="lazy" decoding="async" alt="">
-            <img data-feature-img="1" src="img/cable-usb-c.webp" width="800" height="800" loading="lazy" decoding="async" alt="">
-            <img data-feature-img="2" src="img/boitier-ouvert.webp" width="800" height="800" loading="lazy" decoding="async" alt="">
-            <img data-feature-img="3" src="img/boite.webp" width="800" height="800" loading="lazy" decoding="async" alt="">
-            <ol class="features__dots"><li class="is-active"></li><li></li><li></li><li></li></ol>
-          </div>
+          <div class="features__frame"></div>
+          <ol class="features__dots"><li class="is-active"></li><li></li><li></li><li></li></ol>
         </div>
 
         <ol class="features__list">
           <li class="feature is-active" data-feature="0">
-            <img class="feature__img" src="img/pack-complet.webp" width="800" height="800" loading="lazy" decoding="async" alt="Le pack complet&nbsp;: boîtier PUJIMAX posé sur sa boîte, avec le câble USB-C">
+            <div class="feature__visual">
+              <!-- Visuel 1 : comparaison sur 3 ans -->
+              <div class="panel panel--dark">
+                <div class="eco">
+                  <p class="panel__kicker">Sur 3 ans</p>
+                  <div class="eco__item">
+                    <p class="eco__top"><span>Piles jetables</span><b><span data-eco-jetables>72 000</span> F</b></p>
+                    <div class="eco__bar"><i style="--w:100%"></i></div>
+                  </div>
+                  <div class="eco__item eco__item--pack">
+                    <p class="eco__top"><span>Le pack, une seule fois</span><b><span data-prix>20 000</span> F</b></p>
+                    <div class="eco__bar"><i data-eco-bar style="--w:28%"></i></div>
+                  </div>
+                  <p class="eco__save">Vous gardez <b><span data-eco-gain>52 000</span> F</b></p>
+                  <p class="panel__note">Estimation&nbsp;: 8 piles jetables par mois à 250 F.</p>
+                </div>
+              </div>
+            </div>
             <span class="feature__icon"><svg aria-hidden="true"><use href="#i-coins"/></svg></span>
             <h3>Vous économisez</h3>
             <p>Un seul pack remplace des centaines de piles jetables. Vous payez une fois, ensuite vous rechargez au lieu de racheter.</p>
             <a class="feature__link" href="#economie">Faire le calcul <svg class="ico ico--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </li>
           <li class="feature" data-feature="1">
-            <img class="feature__img" src="img/cable-usb-c.webp" width="800" height="800" loading="lazy" decoding="async" alt="Câble USB-C noir fourni dans le pack">
+            <div class="feature__visual">
+              <!-- Visuel 2 : d'où vient l'énergie -->
+              <div class="panel panel--yellow">
+                <svg class="usb-art" viewBox="0 0 400 400" role="img" aria-label="Le boîtier se recharge avec un chargeur de téléphone, un ordinateur ou une batterie externe">
+                  <g fill="#fff"><rect x="24" y="26" width="104" height="112" rx="22"/><rect x="148" y="26" width="104" height="112" rx="22"/><rect x="272" y="26" width="104" height="112" rx="22"/></g>
+                  <g fill="none" stroke="#141412" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="59" y="56" width="34" height="38" rx="9"/><path d="M68 46v10M84 46v10"/>
+                    <rect x="176" y="50" width="48" height="32" rx="5"/><path d="M168 92h64"/>
+                    <rect x="309" y="46" width="30" height="48" rx="9"/><path d="m327 58-8 12h7l-3 12 9-14h-7z"/>
+                  </g>
+                  <rect x="69" y="82" width="14" height="5" rx="2.5" fill="#141412"/>
+                  <g font-family="Inter, sans-serif" font-weight="600" font-size="14" fill="#141412" text-anchor="middle">
+                    <text x="76" y="122">Chargeur</text><text x="200" y="122">Ordinateur</text><text x="324" y="122">Powerbank</text>
+                  </g>
+                  <g class="flow" fill="none" stroke="#141412" stroke-width="3.5" stroke-linecap="round">
+                    <path d="M76 140C76 200 200 190 200 238"/><path d="M200 140v98"/><path d="M324 140C324 200 200 190 200 238"/>
+                  </g>
+                  <rect x="140" y="256" width="120" height="100" rx="26" fill="#141412"/>
+                  <rect x="140" y="240" width="120" height="38" rx="16" fill="#fff"/>
+                  <g fill="#141412"><circle cx="164" cy="259" r="8"/><circle cx="188" cy="259" r="8"/><circle cx="212" cy="259" r="8"/><circle cx="236" cy="259" r="8"/></g>
+                  <path d="m205 290-15 24h11l-5 22 17-27h-11z" fill="#F3BA0A"/>
+                </svg>
+                <span class="panel__pill">Câble USB-C fourni</span>
+              </div>
+            </div>
             <span class="feature__icon"><svg aria-hidden="true"><use href="#i-plug"/></svg></span>
             <h3>Se recharge comme un téléphone</h3>
             <p>Le câble USB-C est fourni. Branchez-le sur le chargeur de votre téléphone, un ordinateur ou une batterie externe, même pendant les coupures de courant.</p>
           </li>
           <li class="feature" data-feature="2">
-            <img class="feature__img" src="img/boitier-ouvert.webp" width="800" height="800" loading="lazy" decoding="async" alt="Boîtier ouvert avec quatre piles AA en place et son voyant de charge">
+            <div class="feature__visual">
+              <!-- Visuel 3 : le vrai boîtier sur fond sombre -->
+              <div class="panel panel--dark panel--photo">
+                <img src="img/hero-boitier.webp" width="760" height="650" loading="lazy" decoding="async" alt="Boîtier PUJIMAX ouvert, avec le voyant de charge en haut du couvercle">
+                <span class="panel__chip panel__chip--a"><svg aria-hidden="true"><use href="#i-zap"/></svg> Voyant de charge</span>
+                <span class="panel__chip panel__chip--b"><svg aria-hidden="true"><use href="#i-shield"/></svg> Arrêt automatique</span>
+              </div>
+            </div>
             <span class="feature__icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
             <h3>Intelligent et sûr</h3>
             <p>Le voyant du couvercle montre la charge. Elle s'arrête toute seule quand la pile est pleine ou défectueuse.</p>
           </li>
           <li class="feature" data-feature="3">
-            <img class="feature__img" src="img/boite.webp" width="800" height="800" loading="lazy" decoding="async" alt="Boîte PUJIMAX avec les mentions High Capacity, Fast Recharge, 1200 Charge Cycles, 1.5V Constant Output">
+            <div class="feature__visual">
+              <!-- Visuel 4 : compteur de recharges -->
+              <div class="panel panel--light">
+                <div class="ring">
+                  <svg viewBox="0 0 240 240" aria-hidden="true">
+                    <circle cx="120" cy="120" r="100" fill="none" stroke="#E6E6E0" stroke-width="16"/>
+                    <circle class="ring__arc" cx="120" cy="120" r="100" fill="none" stroke="#F3BA0A" stroke-width="16" stroke-linecap="round" pathLength="100" stroke-dasharray="100" transform="rotate(-90 120 120)"/>
+                  </svg>
+                  <p class="ring__center"><b>1 200</b><span>recharges par pile</span></p>
+                </div>
+                <p class="panel__chips"><span>1,5 V constante</span><span>3 400 mWh</span><span>Format AA</span></p>
+              </div>
+            </div>
             <span class="feature__icon"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span>
             <h3>Jusqu'à 1 200 recharges</h3>
             <p>Des piles qui durent des années, avec une tension de 1,5&nbsp;V constante. Et beaucoup moins de piles usées jetées dans les rues de Bamako.</p>
@@ -452,6 +508,6 @@
   <a class="btn btn--yellow btn--sm" href="#commander" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Commander</a>
 </div>
 
-<script src="main.js?v=3" defer></script>
+<script src="main.js?v=5" defer></script>
 </body>
 </html>

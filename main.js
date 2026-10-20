@@ -41,6 +41,13 @@ const CONFIG = {
     el.href = "tel:+" + CONFIG.whatsapp;
     el.textContent = telAffiche(CONFIG.whatsapp);
   });
+  /* ---------- Comparaison sur 3 ans (visuel « Vous économisez ») ---------- */
+  // Même hypothèse que la valeur par défaut du calculateur : 8 piles par mois à 250 F.
+  const jetables3ans = 8 * 250 * 36;
+  $$("[data-eco-jetables]").forEach((el) => (el.textContent = fcfa(jetables3ans)));
+  $$("[data-eco-gain]").forEach((el) => (el.textContent = fcfa(Math.max(0, jetables3ans - CONFIG.prix))));
+  $$("[data-eco-bar]").forEach((el) => el.style.setProperty("--w", Math.min(100, (CONFIG.prix / jetables3ans) * 100) + "%"));
+
   const annee = $("#annee");
   if (annee) annee.textContent = new Date().getFullYear();
 
@@ -228,9 +235,21 @@ const CONFIG = {
     compteurs.forEach((el) => ioC.observe(el));
   }
 
-  /* ---------- Avantages : la photo fixe suit le texte (ordinateur) ---------- */
+  /* ---------- Avantages : le visuel fixe suit le texte (ordinateur) ---------- */
   const avantages = $$(".feature");
-  const photos = $$("[data-feature-img]");
+  const cadre = $(".features__frame");
+  if (cadre) {
+    // On recopie le visuel de chaque avantage dans le cadre fixe (une seule source dans le HTML).
+    const repere = cadre.querySelector(".features__dots");
+    $$(".feature .panel").forEach((panneau, k) => {
+      const copie = panneau.cloneNode(true);
+      copie.classList.toggle("is-active", k === 0);
+      copie.querySelectorAll("[role], [aria-label]").forEach((el) => { el.removeAttribute("role"); el.removeAttribute("aria-label"); });
+      copie.querySelectorAll("img").forEach((img) => (img.alt = ""));
+      cadre.insertBefore(copie, repere);
+    });
+  }
+  const photos = $$(".features__frame .panel");
   const points = $$(".features__dots li");
   function activer(i) {
     avantages.forEach((el, k) => el.classList.toggle("is-active", k === i));
