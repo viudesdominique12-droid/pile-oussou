@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pile Oussou — Piles AA rechargeables USB-C à Bamako</title>
-  <meta name="description" content="Boîtier de charge intelligent USB-C + piles AA rechargeables au lithium. Arrêtez d'acheter des piles jetables. Livraison à Bamako, commande sur WhatsApp.">
-  <meta name="theme-color" content="#FFF8EA">
+  <meta name="description" content="Boîtier de charge intelligent USB-C + 4 piles AA rechargeables au lithium PUJIMAX. 20 000 FCFA, livraison incluse à Bamako, commande sur WhatsApp.">
+  <meta name="theme-color" content="#141412">
 
   <!-- Aperçu quand le lien est partagé sur WhatsApp / Facebook.
        Si le site change d'adresse (nom de domaine), mettre à jour og:url et og:image. -->
@@ -13,16 +13,22 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:url" content="https://viudesdominique12-droid.github.io/pile-oussou/">
   <meta property="og:title" content="Fini les piles jetables — Pile Oussou, Bamako">
-  <meta property="og:description" content="Boîtier de charge USB-C + piles AA rechargeables au lithium. Livraison à Bamako, commande sur WhatsApp.">
+  <meta property="og:description" content="Boîtier de charge USB-C + 4 piles AA rechargeables. 20 000 FCFA, livraison incluse à Bamako.">
   <meta property="og:image" content="https://viudesdominique12-droid.github.io/pile-oussou/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="img/hero-boitier.webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&family=Rubik:wght@600;800&display=swap">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600;800&display=swap">
+  <link rel="stylesheet" href="styles.css?v=2">
+  <script>
+    // Active les animations ; si main.js ne se charge pas, on réaffiche tout.
+    document.documentElement.classList.add("js");
+    addEventListener("load", function () { setTimeout(function () { if (!window.__pileReady) document.documentElement.classList.remove("js"); }, 1500); });
+  </script>
 </head>
 <body>
 
@@ -43,151 +49,119 @@
     <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
     <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-recycle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/></symbol>
   </defs>
 </svg>
 
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-<header class="site-header">
+<header class="site-header" id="site-header">
   <div class="container site-header__inner">
-    <a class="logo" href="#" aria-label="Pile Oussou, accueil">
-      <svg class="logo__mark" viewBox="0 0 40 24" aria-hidden="true"><rect x="1.5" y="1.5" width="33" height="21" rx="5" fill="#FFC21A" stroke="#141414" stroke-width="3"/><rect x="35" y="8" width="4" height="8" rx="1.5" fill="#141414"/><path d="M19.5 5 13 13.2h5l-1.5 5.8 6.5-8.2h-5z" fill="#141414"/></svg>
+    <a class="logo" href="#" aria-label="Pile Oussou, retour en haut">
+      <svg class="logo__mark" viewBox="0 0 40 24" aria-hidden="true"><rect x="1.5" y="1.5" width="33" height="21" rx="6" fill="#F3BA0A"/><rect x="35.5" y="8" width="3.5" height="8" rx="1.5" fill="#F3BA0A"/><path d="M19.5 5 13 13.2h5l-1.5 5.8 6.5-8.2h-5z" fill="#141412"/></svg>
       <span class="logo__text">Pile<b>Oussou</b></span>
     </a>
     <nav class="site-nav" aria-label="Navigation principale">
-      <a href="#avantages">Avantages</a>
+      <a href="#produit">Le produit</a>
       <a href="#economie">Économies</a>
-      <a href="#caracteristiques">Fiche technique</a>
-      <a href="#photos">Photos</a>
+      <a href="#pack">Le pack</a>
       <a href="#faq">Questions</a>
     </nav>
-    <a class="btn btn--sm" href="#commander">Commander</a>
+    <a class="btn btn--yellow btn--sm" href="#commander">Commander</a>
   </div>
 </header>
 
 <main id="contenu">
 
-  <!-- ============ HERO ============ -->
+  <!-- ============ HAUT DE PAGE ============ -->
   <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
     <div class="container hero__grid">
-      <div class="hero__text">
-        <p class="pill"><span class="pill__dot" aria-hidden="true"></span> Très demandé · stock limité</p>
-        <h1>Fini les piles <span class="hl">jetables.</span></h1>
-        <p class="hero__lead">Le boîtier de charge intelligent + <span data-piles>4</span> piles AA rechargeables au lithium. Il se recharge en <strong>USB-C</strong>, avec le chargeur de votre téléphone.</p>
+      <p class="badge" data-reveal><span class="badge__dot" aria-hidden="true"></span> Disponible à Bamako · stock limité</p>
+      <h1 data-reveal style="--i:1">Fini les piles <span class="hl">jetables.</span></h1>
+      <p class="hero__lead" data-reveal style="--i:2">Le boîtier de charge intelligent + <span data-piles>4</span> piles AA rechargeables au lithium. Il se recharge en USB-C, comme votre téléphone.</p>
 
-        <div class="price-row">
-          <p class="price"><span class="price__num" data-prix>20 000</span> <span class="price__cur">FCFA</span></p>
-          <p class="price__note">le pack complet<br>livraison incluse</p>
-        </div>
-
-        <div class="hero__ctas">
-          <a id="hero-cta" class="btn btn--lg" href="#commander">
-            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Commander sur WhatsApp
-          </a>
-          <a class="link-more" href="#avantages">Voir le produit <svg class="ico ico--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        </div>
-
-        <ul class="trust">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg> Livraison gratuite partout à Bamako</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-cash"/></svg> Paiement à la livraison</li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Ou par Orange Money</li>
-        </ul>
+      <div class="hero__media">
+        <div class="hero__halo" aria-hidden="true"></div>
+        <img class="hero__img" id="hero-img" src="img/hero-boitier.webp" width="760" height="650" alt="Boîtier de charge PUJIMAX ouvert, intérieur jaune, avec quatre piles AA en place" fetchpriority="high">
+        <span class="chip chip--a" aria-hidden="true"><svg class="ico ico--sm"><use href="#i-zap"/></svg> USB-C</span>
+        <span class="chip chip--b" aria-hidden="true">3 400 mWh</span>
+        <span class="chip chip--c" aria-hidden="true"><svg class="ico ico--sm"><use href="#i-recycle"/></svg> 1 200 recharges</span>
       </div>
 
-      <div class="hero__art">
-        <svg viewBox="0 0 560 520" role="img" aria-labelledby="art-title">
-          <title id="art-title">Illustration&nbsp;: boîtier de charge noir ouvert, intérieur jaune, avec des piles AA rechargeables</title>
-          <defs>
-            <linearGradient id="g-silver" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#E2E2E2"/><stop offset="1" stop-color="#B5B5B5"/></linearGradient>
-            <linearGradient id="g-body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2E2E2E"/><stop offset=".45" stop-color="#1B1B1B"/><stop offset="1" stop-color="#101010"/></linearGradient>
-            <radialGradient id="g-led"><stop offset="0" stop-color="#8CFFBC"/><stop offset="1" stop-color="#22C55E" stop-opacity="0"/></radialGradient>
-            <linearGradient id="g-blue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5DB6FF"/><stop offset=".5" stop-color="#1E88E5"/><stop offset="1" stop-color="#0D5BB5"/></linearGradient>
-            <!-- pile PUJIMAX : corps bleu, bout noir, borne argentée -->
-            <g id="pile">
-              <rect x="0" y="0" width="200" height="46" rx="11" fill="url(#g-blue)"/>
-              <path d="M160 0h29a11 11 0 0 1 11 11v24a11 11 0 0 1-11 11h-29z" fill="#1A1A1A"/>
-              <rect x="0" y="0" width="200" height="46" rx="11" fill="none" stroke="#141414" stroke-width="3"/>
-              <path d="M160 1.5v43" stroke="#141414" stroke-width="2"/>
-              <rect x="199" y="13" width="11" height="20" rx="4" fill="url(#g-silver)" stroke="#141414" stroke-width="3"/>
-              <text x="24" y="32" font-family="Rubik, sans-serif" font-weight="800" font-size="22" fill="#fff">AA</text>
-              <text x="68" y="29" font-family="Rubik, sans-serif" font-weight="600" font-size="12.5" fill="#DCEEFF">3400 mWh · 1,5V</text>
-            </g>
-          </defs>
-
-          <circle cx="290" cy="262" r="205" fill="#FFC21A" stroke="#141414" stroke-width="3"/>
-          <g stroke="#141414" stroke-width="4" stroke-linecap="round" fill="none">
-            <path d="M92 118l20 12M78 162h24M104 80l12 18"/>
-            <path d="M490 118l-20 12M504 162h-24M478 80l-12 18"/>
-          </g>
-          <ellipse cx="290" cy="452" rx="168" ry="14" fill="#141414" opacity=".2"/>
-
-          <!-- couvercle ouvert -->
-          <rect x="165" y="56" width="250" height="176" rx="36" fill="url(#g-body)" stroke="#141414" stroke-width="3"/>
-          <rect x="182" y="73" width="216" height="142" rx="24" fill="#EDAA00" stroke="#141414" stroke-width="2.5"/>
-          <!-- voyant de charge (petite fenêtre en haut du couvercle, comme sur le vrai PUJIMAX) -->
-          <ellipse class="led-glow" cx="290" cy="100" rx="46" ry="26" fill="url(#g-led)"/>
-          <rect x="264" y="88" width="52" height="24" rx="5" fill="#1A1A1A" stroke="#141414" stroke-width="2.5"/>
-          <rect class="led-glow" x="271" y="94" width="38" height="12" rx="3" fill="#3BE383"/>
-          <g fill="#C78C00" stroke="#141414" stroke-width="2"><circle cx="230" cy="160" r="6"/><circle cx="270" cy="160" r="6"/><circle cx="310" cy="160" r="6"/><circle cx="350" cy="160" r="6"/></g>
-
-          <!-- corps du boîtier -->
-          <rect x="150" y="250" width="280" height="200" rx="32" fill="url(#g-body)" stroke="#141414" stroke-width="3"/>
-          <rect x="170" y="318" width="9" height="96" rx="4.5" fill="#3A3A3A"/>
-          <rect x="270" y="404" width="40" height="13" rx="6.5" fill="#050505" stroke="#4A4A4A" stroke-width="2"/>
-          <rect x="150" y="222" width="280" height="80" rx="28" fill="#FFCD2E" stroke="#141414" stroke-width="3"/>
-          <g fill="#D69500" stroke="#141414" stroke-width="2.5">
-            <ellipse cx="200" cy="262" rx="24" ry="15"/><ellipse cx="260" cy="262" rx="24" ry="15"/><ellipse cx="320" cy="262" rx="24" ry="15"/><ellipse cx="380" cy="262" rx="24" ry="15"/>
-          </g>
-          <g stroke="#141414">
-            <ellipse cx="200" cy="259" rx="19" ry="11" fill="#1A1A1A" stroke-width="2"/><ellipse cx="200" cy="257" rx="8" ry="5" fill="url(#g-silver)" stroke-width="1.5"/>
-            <ellipse cx="260" cy="259" rx="19" ry="11" fill="#1A1A1A" stroke-width="2"/><ellipse cx="260" cy="257" rx="8" ry="5" fill="url(#g-silver)" stroke-width="1.5"/>
-            <ellipse cx="320" cy="259" rx="19" ry="11" fill="#1A1A1A" stroke-width="2"/><ellipse cx="320" cy="257" rx="8" ry="5" fill="url(#g-silver)" stroke-width="1.5"/>
-          </g>
-
-          <!-- piles posées devant -->
-          <use href="#pile" transform="translate(40 398) rotate(-9)"/>
-          <use href="#pile" transform="translate(322 432) rotate(5)"/>
-        </svg>
-        <span class="tag tag--led">Voyant de charge</span>
-        <span class="tag tag--mwh">3 400 mWh</span>
-        <span class="tag tag--usb"><svg class="ico ico--sm" aria-hidden="true"><use href="#i-zap"/></svg> USB-C</span>
+      <div class="hero__buy" data-reveal style="--i:3">
+        <p class="price"><span class="price__num" data-prix>20 000</span> <span class="price__cur">FCFA</span></p>
+        <p class="price__tag"><svg class="ico ico--sm" aria-hidden="true"><use href="#i-truck"/></svg> Livraison incluse à Bamako</p>
       </div>
+
+      <div class="hero__ctas" data-reveal style="--i:4">
+        <a id="hero-cta" class="btn btn--yellow btn--lg" href="#commander"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Commander sur WhatsApp</a>
+        <a class="btn btn--ghost btn--lg" href="#produit">Découvrir <svg class="ico ico--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <ul class="hero__trust" data-reveal style="--i:5">
+        <li><svg class="ico ico--sm" aria-hidden="true"><use href="#i-cash"/></svg> Paiement à la livraison</li>
+        <li><svg class="ico ico--sm" aria-hidden="true"><use href="#i-phone"/></svg> ou Orange Money</li>
+      </ul>
+    </div>
+
+    <!-- Chiffres clés -->
+    <div class="container">
+      <ul class="stats" aria-label="Le pack en chiffres">
+        <li class="stat" data-reveal><span class="stat__num"><span data-count="1200">1 200</span></span><span class="stat__label">recharges par pile</span></li>
+        <li class="stat" data-reveal style="--i:1"><span class="stat__num"><span data-count="3400">3 400</span><small>mWh</small></span><span class="stat__label">de capacité par pile</span></li>
+        <li class="stat" data-reveal style="--i:2"><span class="stat__num"><span data-piles>4</span></span><span class="stat__label">piles AA incluses</span></li>
+        <li class="stat" data-reveal style="--i:3"><span class="stat__num">0<small>F</small></span><span class="stat__label">de livraison à Bamako</span></li>
+      </ul>
     </div>
   </section>
 
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track">
-      <span>Recharge USB-C</span><i></i><span>1,5 V</span><i></i><span>3 400 mWh</span><i></i><span>Lithium-ion</span><i></i><span>Arrêt automatique</span><i></i><span>1 200 recharges</span><i></i>
-      <span>Recharge USB-C</span><i></i><span>1,5 V</span><i></i><span>3 400 mWh</span><i></i><span>Lithium-ion</span><i></i><span>Arrêt automatique</span><i></i><span>1 200 recharges</span><i></i>
-    </div>
-  </div>
-
-  <!-- ============ AVANTAGES ============ -->
-  <section id="avantages" class="section">
+  <!-- ============ LE PRODUIT (photo fixe + avantages qui défilent) ============ -->
+  <section id="produit" class="section features">
     <div class="container">
-      <p class="eyebrow">Pourquoi ce pack</p>
-      <h2>Un seul achat. Des centaines de piles en moins.</h2>
-      <div class="cards">
-        <article class="card">
-          <span class="card__icon"><svg aria-hidden="true"><use href="#i-coins"/></svg></span>
-          <h3>Vous économisez</h3>
-          <p>Le pack remplace des centaines de piles jetables. Vous payez une fois, vous rechargez au lieu de racheter.</p>
-        </article>
-        <article class="card">
-          <span class="card__icon"><svg aria-hidden="true"><use href="#i-plug"/></svg></span>
-          <h3>Se recharge comme un téléphone</h3>
-          <p>Port USB-C&nbsp;: branchez le chargeur de votre téléphone, un ordinateur ou une batterie externe, même pendant les coupures.</p>
-        </article>
-        <article class="card">
-          <span class="card__icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
-          <h3>Intelligent et sûr</h3>
-          <p>Le voyant du couvercle montre la charge. Elle s'arrête toute seule quand la pile est pleine ou défectueuse.</p>
-        </article>
-        <article class="card">
-          <span class="card__icon"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span>
-          <h3>Moins de déchets</h3>
-          <p>Moins de piles usées jetées dans les rues et les caniveaux de Bamako.</p>
-        </article>
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Pourquoi ce pack</p>
+        <h2>Un seul achat. Des centaines de piles en moins.</h2>
+      </div>
+
+      <div class="features__layout">
+        <div class="features__visual" aria-hidden="true">
+          <div class="features__frame">
+            <img class="is-active" data-feature-img="0" src="img/pack-complet.webp" width="800" height="800" loading="lazy" decoding="async" alt="">
+            <img data-feature-img="1" src="img/cable-usb-c.webp" width="800" height="800" loading="lazy" decoding="async" alt="">
+            <img data-feature-img="2" src="img/boitier-ouvert.webp" width="800" height="800" loading="lazy" decoding="async" alt="">
+            <img data-feature-img="3" src="img/boite.webp" width="800" height="800" loading="lazy" decoding="async" alt="">
+            <ol class="features__dots"><li class="is-active"></li><li></li><li></li><li></li></ol>
+          </div>
+        </div>
+
+        <ol class="features__list">
+          <li class="feature is-active" data-feature="0">
+            <img class="feature__img" src="img/pack-complet.webp" width="800" height="800" loading="lazy" decoding="async" alt="Le pack complet&nbsp;: boîtier PUJIMAX posé sur sa boîte, avec le câble USB-C">
+            <span class="feature__icon"><svg aria-hidden="true"><use href="#i-coins"/></svg></span>
+            <h3>Vous économisez</h3>
+            <p>Un seul pack remplace des centaines de piles jetables. Vous payez une fois, ensuite vous rechargez au lieu de racheter.</p>
+            <a class="feature__link" href="#economie">Faire le calcul <svg class="ico ico--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="feature" data-feature="1">
+            <img class="feature__img" src="img/cable-usb-c.webp" width="800" height="800" loading="lazy" decoding="async" alt="Câble USB-C noir fourni dans le pack">
+            <span class="feature__icon"><svg aria-hidden="true"><use href="#i-plug"/></svg></span>
+            <h3>Se recharge comme un téléphone</h3>
+            <p>Le câble USB-C est fourni. Branchez-le sur le chargeur de votre téléphone, un ordinateur ou une batterie externe, même pendant les coupures de courant.</p>
+          </li>
+          <li class="feature" data-feature="2">
+            <img class="feature__img" src="img/boitier-ouvert.webp" width="800" height="800" loading="lazy" decoding="async" alt="Boîtier ouvert avec quatre piles AA en place et son voyant de charge">
+            <span class="feature__icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3>Intelligent et sûr</h3>
+            <p>Le voyant du couvercle montre la charge. Elle s'arrête toute seule quand la pile est pleine ou défectueuse.</p>
+          </li>
+          <li class="feature" data-feature="3">
+            <img class="feature__img" src="img/boite.webp" width="800" height="800" loading="lazy" decoding="async" alt="Boîte PUJIMAX avec les mentions High Capacity, Fast Recharge, 1200 Charge Cycles, 1.5V Constant Output">
+            <span class="feature__icon"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span>
+            <h3>Jusqu'à 1 200 recharges</h3>
+            <p>Des piles qui durent des années, avec une tension de 1,5&nbsp;V constante. Et beaucoup moins de piles usées jetées dans les rues de Bamako.</p>
+          </li>
+        </ol>
       </div>
     </div>
   </section>
@@ -195,16 +169,16 @@
   <!-- ============ ÉCONOMIES ============ -->
   <section id="economie" class="section section--dark">
     <div class="container split">
-      <div>
-        <p class="eyebrow eyebrow--light">Faites le calcul</p>
+      <div data-reveal>
+        <p class="eyebrow eyebrow--dark">Faites le calcul</p>
         <h2>Une pile jetable, c'est de l'argent <span class="hl">jeté.</span></h2>
-        <p class="lead-light">Télécommande, jouets, lampe torche, manette… Calculez ce que vous dépensez chaque année en piles, et en combien de temps le pack est remboursé.</p>
+        <p class="lead lead--dark">Télécommande, jouets, lampe torche, manette… Calculez ce que vous dépensez chaque année en piles, et en combien de temps le pack est remboursé.</p>
       </div>
 
-      <div class="calc" role="group" aria-labelledby="calc-title">
+      <div class="calc" role="group" aria-labelledby="calc-title" data-reveal style="--i:1">
         <h3 id="calc-title" class="calc__title">Mon calcul</h3>
 
-        <label class="calc__label" for="calc-qte">Piles jetables achetées par mois&nbsp;: <output id="calc-qte-out" for="calc-qte">8</output></label>
+        <label class="calc__label" for="calc-qte">Piles jetables achetées par mois <output id="calc-qte-out" for="calc-qte">8</output></label>
         <input id="calc-qte" class="range" type="range" min="1" max="30" step="1" value="8">
 
         <fieldset class="calc__prix">
@@ -229,58 +203,62 @@
   <!-- ============ COMMENT ÇA MARCHE ============ -->
   <section id="comment" class="section">
     <div class="container">
-      <p class="eyebrow">Simple comme un téléphone</p>
-      <h2>Comment ça marche&nbsp;?</h2>
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow">Simple comme un téléphone</p>
+        <h2>Comment ça marche&nbsp;?</h2>
+      </div>
       <ol class="steps">
-        <li class="step">
+        <li class="step" data-reveal>
           <span class="step__num">1</span>
-          <h3>Mettez les piles dans le boîtier</h3>
-          <p>Jusqu'à 4 piles AA à la fois.</p>
+          <h3>Mettez les piles</h3>
+          <p>Jusqu'à 4 piles AA dans le boîtier.</p>
         </li>
-        <li class="step">
+        <li class="step" data-reveal style="--i:1">
           <span class="step__num">2</span>
-          <h3>Branchez le câble USB-C fourni</h3>
+          <h3>Branchez le câble USB-C</h3>
           <p>Sur le chargeur de votre téléphone, un ordinateur ou une batterie externe.</p>
         </li>
-        <li class="step">
+        <li class="step" data-reveal style="--i:2">
           <span class="step__num">3</span>
           <h3>Suivez le voyant</h3>
-          <p>Le voyant du couvercle montre la charge. Le boîtier s'arrête tout seul quand c'est plein.</p>
+          <p>Le boîtier s'arrête tout seul quand c'est plein.</p>
         </li>
       </ol>
 
-      <h3 class="subhead">Ça marche dans tous vos appareils à piles AA</h3>
-      <ul class="chips">
-        <li>Télécommande TV et décodeur</li>
-        <li>Manette de jeu</li>
-        <li>Jouets</li>
-        <li>Lampe torche</li>
-        <li>Radio</li>
-        <li>Souris et clavier sans fil</li>
-        <li>Micro sans fil</li>
-        <li>Horloge murale</li>
-      </ul>
+      <div class="devices" data-reveal>
+        <h3 class="devices__title">Pour tous vos appareils à piles AA</h3>
+        <ul class="chips">
+          <li>Télécommande TV et décodeur</li>
+          <li>Manette de jeu</li>
+          <li>Jouets</li>
+          <li>Lampe torche</li>
+          <li>Radio</li>
+          <li>Souris et clavier sans fil</li>
+          <li>Micro sans fil</li>
+          <li>Horloge murale</li>
+        </ul>
+      </div>
 
       <!-- Encadré AA / AAA : des clients ont déjà confondu avec les « petites piles » AAA -->
-      <div class="aa-note">
+      <div class="aa-note" data-reveal>
         <div class="aa-note__sizes" aria-hidden="true">
           <figure class="size size--ok">
             <!-- AA à l'échelle : 14,5 × 50,5 mm -->
             <svg class="size__pile size__pile--aa" viewBox="0 0 50 162">
               <rect x="3" y="10" width="44" height="149" rx="8" fill="#1E88E5"/>
-              <path d="M3 18a8 8 0 0 1 8-8h28a8 8 0 0 1 8 8v18H3z" fill="#1A1A1A"/>
-              <rect x="3" y="10" width="44" height="149" rx="8" fill="none" stroke="#141414" stroke-width="3"/>
-              <rect x="17" y="3" width="16" height="9" rx="3" fill="#D9D9D9" stroke="#141414" stroke-width="2.5"/>
-              <text x="25" y="100" transform="rotate(-90 25 100)" text-anchor="middle" font-family="Rubik, sans-serif" font-weight="800" font-size="17" fill="#fff">AA</text>
+              <path d="M3 18a8 8 0 0 1 8-8h28a8 8 0 0 1 8 8v18H3z" fill="#141412"/>
+              <rect x="3" y="10" width="44" height="149" rx="8" fill="none" stroke="#141412" stroke-width="3"/>
+              <rect x="17" y="3" width="16" height="9" rx="3" fill="#D9D9D9" stroke="#141412" stroke-width="2.5"/>
+              <text x="25" y="100" transform="rotate(-90 25 100)" text-anchor="middle" font-family="Sora, sans-serif" font-weight="800" font-size="16" fill="#fff">AA</text>
             </svg>
             <figcaption><svg class="ico ico--sm"><use href="#i-check"/></svg> AA<small>Ce pack</small></figcaption>
           </figure>
           <figure class="size size--no">
             <!-- AAA à la même échelle : 10,5 × 44,5 mm -->
             <svg class="size__pile size__pile--aaa" viewBox="0 0 38 144">
-              <rect x="3" y="10" width="32" height="131" rx="7" fill="#D6CFC2" stroke="#141414" stroke-width="3"/>
-              <rect x="12" y="3" width="14" height="9" rx="3" fill="#D9D9D9" stroke="#141414" stroke-width="2.5"/>
-              <text x="19" y="80" transform="rotate(-90 19 80)" text-anchor="middle" font-family="Rubik, sans-serif" font-weight="800" font-size="13" fill="#141414">AAA</text>
+              <rect x="3" y="10" width="32" height="131" rx="7" fill="#DADAD5" stroke="#141412" stroke-width="3"/>
+              <rect x="12" y="3" width="14" height="9" rx="3" fill="#D9D9D9" stroke="#141412" stroke-width="2.5"/>
+              <text x="19" y="80" transform="rotate(-90 19 80)" text-anchor="middle" font-family="Sora, sans-serif" font-weight="800" font-size="12" fill="#141412">AAA</text>
             </svg>
             <figcaption><svg class="ico ico--sm"><use href="#i-x"/></svg> AAA<small>Pas compatible</small></figcaption>
           </figure>
@@ -294,63 +272,47 @@
     </div>
   </section>
 
-  <!-- ============ CARACTÉRISTIQUES ============ -->
-  <section id="caracteristiques" class="section section--tint">
-    <div class="container split split--top">
-      <div>
-        <p class="eyebrow">Fiche technique</p>
-        <h2>Caractéristiques</h2>
-        <table class="specs">
-          <caption class="sr-only">Caractéristiques du pack</caption>
-          <tbody>
-            <tr><th scope="row">Produit</th><td>Boîtier de charge intelligent + piles AA rechargeables</td></tr>
-            <tr><th scope="row">Marque</th><td>PUJIMAX</td></tr>
-            <tr><th scope="row">Technologie</th><td>Lithium-ion</td></tr>
-            <tr><th scope="row">Tension</th><td>1,5 V constante</td></tr>
-            <tr><th scope="row">Capacité</th><td>3 400 mWh par pile</td></tr>
-            <tr><th scope="row">Format</th><td>AA, la taille standard (pas les petites AAA)</td></tr>
-            <tr><th scope="row">Recharge</th><td>Port USB-C (5 V / 3 A), câble fourni</td></tr>
-            <tr><th scope="row">Durée de vie</th><td>Jusqu'à 1 200 recharges (donnée fabricant)</td></tr>
-            <tr><th scope="row">Sécurité</th><td>Voyant de charge, arrêt automatique</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <aside class="box">
-        <h3>Dans le pack</h3>
-        <ul class="checklist">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> <span>1 boîtier de charge intelligent USB-C</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> <span>1 câble USB-C</span></li>
-          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> <span><span data-piles>4</span> piles AA rechargeables lithium 1,5 V</span></li>
-        </ul>
-        <p class="box__price"><span data-prix>20 000</span> FCFA</p>
-        <p class="box__note">Livraison incluse partout à Bamako</p>
-        <a class="btn btn--dark btn--block" href="#commander"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Je commande</a>
-      </aside>
-    </div>
-  </section>
-
-  <!-- ============ PHOTOS ============ -->
-  <section id="photos" class="section">
+  <!-- ============ LE PACK ============ -->
+  <section id="pack" class="section section--white">
     <div class="container">
-      <p class="eyebrow">Photos réelles</p>
-      <h2>Le produit, tel que vous le recevez</h2>
-      <div class="gallery">
-        <figure>
-          <img src="img/boitier-ouvert.webp" width="800" height="800" loading="lazy" decoding="async" alt="Boîtier de charge PUJIMAX ouvert, intérieur jaune, avec quatre piles AA en place">
-          <figcaption>Le boîtier ouvert, 4 piles en place</figcaption>
+      <div class="pack">
+        <figure class="pack__photo" data-reveal>
+          <img src="img/pack-complet.webp" width="800" height="800" loading="lazy" decoding="async" alt="Le pack complet&nbsp;: boîtier de charge PUJIMAX posé sur sa boîte, piles en place, câble USB-C sur la deuxième boîte">
+          <span class="hotspot" style="--x:77%;--y:41%"><span>2</span></span>
+          <span class="hotspot" style="--x:79%;--y:57%"><span>1</span></span>
+          <span class="hotspot" style="--x:37%;--y:75%"><span>3</span></span>
+          <span class="hotspot" style="--x:66%;--y:86%"><span>4</span></span>
         </figure>
-        <figure>
-          <img src="img/pack-complet.webp" width="800" height="800" loading="lazy" decoding="async" alt="Le pack complet&nbsp;: boîtier PUJIMAX posé sur sa boîte, à côté du câble USB-C">
-          <figcaption>Le pack complet</figcaption>
-        </figure>
-        <figure>
-          <img src="img/boite.webp" width="800" height="800" loading="lazy" decoding="async" alt="Boîte PUJIMAX AA 1,5 V Rechargeable Lithium-ion Battery Charger Set">
-          <figcaption>La boîte PUJIMAX</figcaption>
-        </figure>
-        <figure>
-          <img src="img/cable-usb-c.webp" width="800" height="800" loading="lazy" decoding="async" alt="Câble USB-A vers USB-C noir fourni dans le pack">
-          <figcaption>Câble USB-C fourni</figcaption>
-        </figure>
+
+        <div class="pack__info" data-reveal style="--i:1">
+          <p class="eyebrow">Le pack</p>
+          <h2>Tout est dans la boîte</h2>
+          <ol class="pack__list">
+            <li><span class="pack__n">1</span><span><b>1 boîtier de charge</b> intelligent <span class="nw">USB-C</span></span></li>
+            <li><span class="pack__n">2</span><span><b><span data-piles>4</span> piles AA</b> lithium 1,5&nbsp;V, 3 400&nbsp;mWh</span></li>
+            <li><span class="pack__n">3</span><span><b>1 câble USB-C</b></span></li>
+            <li><span class="pack__n">4</span><span><b>La boîte d'origine</b> PUJIMAX</span></li>
+          </ol>
+          <div class="pack__buy">
+            <p class="pack__price"><span data-prix>20 000</span> FCFA</p>
+            <p class="pack__note"><svg class="ico ico--sm" aria-hidden="true"><use href="#i-truck"/></svg> Livraison incluse partout à Bamako</p>
+            <a class="btn btn--dark btn--lg btn--block" href="#commander"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Je commande</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="specs" id="caracteristiques" data-reveal>
+        <h3 class="specs__title">Fiche technique</h3>
+        <dl class="specs__grid">
+          <div><dt>Marque</dt><dd>PUJIMAX</dd></div>
+          <div><dt>Technologie</dt><dd>Lithium-ion</dd></div>
+          <div><dt>Tension</dt><dd>1,5 V constante</dd></div>
+          <div><dt>Capacité</dt><dd>3 400 mWh par pile</dd></div>
+          <div><dt>Format</dt><dd>AA (pas AAA)</dd></div>
+          <div><dt>Recharge</dt><dd>USB-C, 5 V / 3 A</dd></div>
+          <div><dt>Durée de vie</dt><dd>Jusqu'à 1 200 recharges <small>(donnée fabricant)</small></dd></div>
+          <div><dt>Sécurité</dt><dd>Voyant de charge, arrêt automatique</dd></div>
+        </dl>
       </div>
     </div>
   </section>
@@ -358,18 +320,18 @@
   <!-- ============ COMMANDER ============ -->
   <section id="commander" class="section section--yellow">
     <div class="container split split--top">
-      <div class="order-intro">
-        <p class="eyebrow eyebrow--dark">Commande</p>
+      <div class="order-intro" data-reveal>
+        <p class="eyebrow eyebrow--ink">Commande</p>
         <h2>Commandez en 1 minute</h2>
         <ol class="howto">
-          <li><b>Remplissez</b> le petit formulaire.</li>
-          <li><b>WhatsApp s'ouvre</b> avec votre commande déjà écrite&nbsp;: appuyez sur Envoyer.</li>
-          <li><b>On vous livre</b> à Bamako et vous payez à la réception ou par Orange Money.</li>
+          <li><span>1</span><p><b>Remplissez</b> le petit formulaire.</p></li>
+          <li><span>2</span><p><b>WhatsApp s'ouvre</b> avec votre commande déjà écrite&nbsp;: appuyez sur Envoyer.</p></li>
+          <li><span>3</span><p><b>On vous livre</b> à Bamako, livraison incluse. Vous payez à la réception ou par Orange Money.</p></li>
         </ol>
         <p class="order-alt">Vous préférez appeler&nbsp;?<br><a data-tel href="tel:+22391026406">+223 91 02 64 06</a></p>
       </div>
 
-      <form id="form-commande" class="order" novalidate>
+      <form id="form-commande" class="order" novalidate data-reveal style="--i:1">
         <div class="field">
           <label for="f-nom">Votre nom <span class="req" aria-hidden="true">*</span></label>
           <input id="f-nom" name="nom" type="text" autocomplete="name" required aria-describedby="f-nom-err">
@@ -406,11 +368,11 @@
         </div>
 
         <div class="total">
-          <span>Total</span>
+          <span>Total <small>livraison incluse</small></span>
           <strong><span id="total">20 000</span> FCFA</strong>
         </div>
 
-        <button type="submit" class="btn btn--lg btn--block">
+        <button type="submit" class="btn btn--dark btn--lg btn--block">
           <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Envoyer ma commande sur WhatsApp
         </button>
         <p class="order__help">WhatsApp va s'ouvrir avec votre commande déjà écrite.</p>
@@ -425,9 +387,11 @@
   <!-- ============ FAQ ============ -->
   <section id="faq" class="section">
     <div class="container container--narrow">
-      <p class="eyebrow">Questions fréquentes</p>
-      <h2>Vous vous demandez…</h2>
-      <div class="faq">
+      <div class="section-head section-head--center" data-reveal>
+        <p class="eyebrow">Questions fréquentes</p>
+        <h2>Vous vous demandez…</h2>
+      </div>
+      <div class="faq" data-reveal>
         <details>
           <summary>Avec quoi je recharge le boîtier&nbsp;?<svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
           <p>Avec le câble USB-C fourni, branché sur le chargeur de votre téléphone, un ordinateur ou une batterie externe (powerbank). Pratique pendant les coupures de courant.</p>
@@ -469,15 +433,13 @@
 <footer class="site-footer">
   <div class="container site-footer__inner">
     <div>
-      <a class="logo logo--light" href="#" aria-label="Pile Oussou, retour en haut">
-        <svg class="logo__mark" viewBox="0 0 40 24" aria-hidden="true"><rect x="1.5" y="1.5" width="33" height="21" rx="5" fill="#FFC21A" stroke="#FFF8EA" stroke-width="3"/><rect x="35" y="8" width="4" height="8" rx="1.5" fill="#FFF8EA"/><path d="M19.5 5 13 13.2h5l-1.5 5.8 6.5-8.2h-5z" fill="#141414"/></svg>
+      <a class="logo" href="#" aria-label="Pile Oussou, retour en haut">
+        <svg class="logo__mark" viewBox="0 0 40 24" aria-hidden="true"><rect x="1.5" y="1.5" width="33" height="21" rx="6" fill="#F3BA0A"/><rect x="35.5" y="8" width="3.5" height="8" rx="1.5" fill="#F3BA0A"/><path d="M19.5 5 13 13.2h5l-1.5 5.8 6.5-8.2h-5z" fill="#141412"/></svg>
         <span class="logo__text">Pile<b>Oussou</b></span>
       </a>
       <p>Piles rechargeables et boîtiers de charge USB-C. Bamako, Mali.</p>
     </div>
-    <div class="site-footer__contact">
-      <a class="btn btn--sm" data-wa href="#commander"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Nous écrire sur WhatsApp</a>
-    </div>
+    <a class="btn btn--yellow" data-wa href="#commander"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Nous écrire sur WhatsApp</a>
   </div>
   <div class="container site-footer__legal">
     <p>© <span id="annee">2026</span> Pile Oussou. PUJIMAX est une marque de son propriétaire&nbsp;; Pile Oussou est un revendeur indépendant.</p>
@@ -487,9 +449,9 @@
 <!-- Barre de commande fixe (mobile) -->
 <div class="sticky-cta" id="sticky-cta" aria-hidden="true">
   <p class="sticky-cta__price"><span><span data-prix>20 000</span> FCFA</span><small>livraison incluse à Bamako</small></p>
-  <a class="btn btn--sm" href="#commander" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Commander</a>
+  <a class="btn btn--yellow btn--sm" href="#commander" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Commander</a>
 </div>
 
-<script src="main.js" defer></script>
+<script src="main.js?v=3" defer></script>
 </body>
 </html>

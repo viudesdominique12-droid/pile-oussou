@@ -26,10 +26,14 @@ const CONFIG = {
 Les photos du produit (dossier `img/`) ont été détourées et retouchées à partir des photos envoyées par Miya
 (fond studio uni, balance des blancs, contraste). Les versions grand format sont dans `../photos-retouchees/` (hors dépôt).
 
+## Propositions de logos
+
+`logos.html` (non liée depuis la page de vente) présente 3 idées de logo : BatteryMali, MaliPower, Batteries Bamako.
+
 ## Voir le site en local
 
 ```bash
-python -m http.server 8080
+python -m http.server 8090
 ```
 
-Puis ouvrir http://localhost:8080.
+Puis ouvrir http://localhost:8090.

@@ -64,6 +64,7 @@ const CONFIG = {
     const prixPile = Number($('input[name="prix-pile"]:checked').value);
     const parMois = n * prixPile;
     qteOut.textContent = n;
+    qte.style.setProperty("--p", ((n - qte.min) / (qte.max - qte.min)) * 100 + "%");
     annuel.textContent = fcfa(parMois * 12);
     retour.textContent = dureeRemboursement(CONFIG.prix / parMois);
   }
@@ -164,4 +165,93 @@ const CONFIG = {
     new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; maj(); }).observe(heroCta);
     new IntersectionObserver(([e]) => { commandeVisible = e.isIntersecting; maj(); }, { threshold: 0.05 }).observe(zoneCommande);
   }
+
+  /* =========================================================
+     Effets au défilement
+     ========================================================= */
+  const reduit = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const aIO = "IntersectionObserver" in window;
+
+  /* ---------- Apparition des blocs ---------- */
+  const blocs = $$("[data-reveal]");
+  if (!aIO || reduit) {
+    blocs.forEach((el) => el.classList.add("is-in"));
+  } else {
+    const io = new IntersectionObserver((entrees) => {
+      entrees.forEach((e) => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("is-in");
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    blocs.forEach((el) => io.observe(el));
+  }
+  window.__pileReady = true;
+
+  /* ---------- En-tête plus marqué après le haut de page ---------- */
+  const entete = $("#site-header");
+  const heroImg = $("#hero-img");
+  let tick = false;
+  function auScroll() {
+    tick = false;
+    const y = window.scrollY;
+    entete.classList.toggle("is-scrolled", y > 8);
+    // léger effet de profondeur sur la photo du haut de page
+    if (heroImg && !reduit && y < 900) heroImg.style.transform = `translate3d(0, ${y * 0.08}px, 0)`;
+  }
+  window.addEventListener("scroll", () => {
+    if (!tick) { tick = true; requestAnimationFrame(auScroll); }
+  }, { passive: true });
+  auScroll();
+
+  /* ---------- Chiffres qui défilent ---------- */
+  const compteurs = $$("[data-count]");
+  function compter(el) {
+    const fin = Number(el.dataset.count);
+    const debut = performance.now();
+    const duree = 1100;
+    const pas = (t) => {
+      const k = Math.min(1, (t - debut) / duree);
+      el.textContent = fcfa(fin * (1 - Math.pow(1 - k, 3)));
+      if (k < 1) requestAnimationFrame(pas);
+    };
+    requestAnimationFrame(pas);
+  }
+  if (aIO && !reduit) {
+    const ioC = new IntersectionObserver((entrees) => {
+      entrees.forEach((e) => {
+        if (!e.isIntersecting) return;
+        compter(e.target);
+        ioC.unobserve(e.target);
+      });
+    }, { threshold: 0.6 });
+    compteurs.forEach((el) => ioC.observe(el));
+  }
+
+  /* ---------- Avantages : la photo fixe suit le texte (ordinateur) ---------- */
+  const avantages = $$(".feature");
+  const photos = $$("[data-feature-img]");
+  const points = $$(".features__dots li");
+  function activer(i) {
+    avantages.forEach((el, k) => el.classList.toggle("is-active", k === i));
+    photos.forEach((el, k) => el.classList.toggle("is-active", k === i));
+    points.forEach((el, k) => el.classList.toggle("is-active", k === i));
+  }
+  // L'avantage actif est celui qui passe au milieu de l'écran (calcul au scroll,
+  // plus fiable qu'un IntersectionObserver quand la page est affichée dans un cadre).
+  let actif = 0;
+  function suivreAvantages() {
+    if (!avantages.length) return;
+    const milieu = window.innerHeight / 2;
+    let meilleur = actif, distMin = Infinity;
+    avantages.forEach((el, k) => {
+      const r = el.getBoundingClientRect();
+      const d = r.top <= milieu && r.bottom >= milieu ? 0 : Math.min(Math.abs(r.top - milieu), Math.abs(r.bottom - milieu));
+      if (d < distMin) { distMin = d; meilleur = k; }
+    });
+    if (meilleur !== actif) { actif = meilleur; activer(actif); }
+  }
+  window.addEventListener("scroll", () => requestAnimationFrame(suivreAvantages), { passive: true });
+  window.addEventListener("resize", suivreAvantages);
+  suivreAvantages();
 })();
