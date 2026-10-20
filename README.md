@@ -1,7 +1,7 @@
 # Pile Oussou — page de vente
 
 Page de vente d'un pack « boîtier de charge USB-C + 4 piles AA rechargeables lithium » (PUJIMAX, 3 400 mWh), vendu à Bamako (Mali).
-Commande via WhatsApp, paiement à la livraison ou par Orange Money.
+Commande via WhatsApp, livraison incluse à Bamako, paiement à la livraison ou par Orange Money.
 
 Site statique (HTML, CSS, JavaScript), sans outil de compilation. En ligne sur GitHub Pages : https://viudesdominique12-droid.github.io/pile-oussou/
 
@@ -21,8 +21,10 @@ const CONFIG = {
 ## Encore provisoire
 
 - Le nom « Pile Oussou » et le logo (le client hésite entre BatteryMali, MaliPower, Batteries Bamako).
-- Les photos réelles du produit (section retirée en attendant les photos de Miya).
 - L'image d'aperçu `img/og-image.jpg` affiche le nom et le prix : à refaire s'ils changent.
+
+Les photos du produit (dossier `img/`) ont été détourées et retouchées à partir des photos envoyées par Miya
+(fond studio uni, balance des blancs, contraste). Les versions grand format sont dans `../photos-retouchees/` (hors dépôt).
 
 ## Voir le site en local
 

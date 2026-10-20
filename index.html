@@ -58,6 +58,7 @@
       <a href="#avantages">Avantages</a>
       <a href="#economie">Économies</a>
       <a href="#caracteristiques">Fiche technique</a>
+      <a href="#photos">Photos</a>
       <a href="#faq">Questions</a>
     </nav>
     <a class="btn btn--sm" href="#commander">Commander</a>
@@ -76,7 +77,7 @@
 
         <div class="price-row">
           <p class="price"><span class="price__num" data-prix>20 000</span> <span class="price__cur">FCFA</span></p>
-          <p class="price__note">le pack complet<br>livraison à Bamako</p>
+          <p class="price__note">le pack complet<br>livraison incluse</p>
         </div>
 
         <div class="hero__ctas">
@@ -87,7 +88,7 @@
         </div>
 
         <ul class="trust">
-          <li><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg> Livraison partout à Bamako</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-truck"/></svg> Livraison gratuite partout à Bamako</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-cash"/></svg> Paiement à la livraison</li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Ou par Orange Money</li>
         </ul>
@@ -123,11 +124,11 @@
           <!-- couvercle ouvert -->
           <rect x="165" y="56" width="250" height="176" rx="36" fill="url(#g-body)" stroke="#141414" stroke-width="3"/>
           <rect x="182" y="73" width="216" height="142" rx="24" fill="#EDAA00" stroke="#141414" stroke-width="2.5"/>
-          <g class="leds">
-            <circle cx="230" cy="110" r="17" fill="url(#g-led)"/><circle cx="270" cy="110" r="17" fill="url(#g-led)"/><circle cx="310" cy="110" r="17" fill="url(#g-led)"/><circle cx="350" cy="110" r="17" fill="url(#g-led)"/>
-            <g fill="#3BE383" stroke="#0E5132" stroke-width="2"><circle cx="230" cy="110" r="6"/><circle cx="270" cy="110" r="6"/><circle cx="310" cy="110" r="6"/><circle cx="350" cy="110" r="6"/></g>
-          </g>
-          <g fill="#C78C00" stroke="#141414" stroke-width="2"><circle cx="230" cy="170" r="5.5"/><circle cx="270" cy="170" r="5.5"/><circle cx="310" cy="170" r="5.5"/><circle cx="350" cy="170" r="5.5"/></g>
+          <!-- voyant de charge (petite fenêtre en haut du couvercle, comme sur le vrai PUJIMAX) -->
+          <ellipse class="led-glow" cx="290" cy="100" rx="46" ry="26" fill="url(#g-led)"/>
+          <rect x="264" y="88" width="52" height="24" rx="5" fill="#1A1A1A" stroke="#141414" stroke-width="2.5"/>
+          <rect class="led-glow" x="271" y="94" width="38" height="12" rx="3" fill="#3BE383"/>
+          <g fill="#C78C00" stroke="#141414" stroke-width="2"><circle cx="230" cy="160" r="6"/><circle cx="270" cy="160" r="6"/><circle cx="310" cy="160" r="6"/><circle cx="350" cy="160" r="6"/></g>
 
           <!-- corps du boîtier -->
           <rect x="150" y="250" width="280" height="200" rx="32" fill="url(#g-body)" stroke="#141414" stroke-width="3"/>
@@ -147,7 +148,7 @@
           <use href="#pile" transform="translate(40 398) rotate(-9)"/>
           <use href="#pile" transform="translate(322 432) rotate(5)"/>
         </svg>
-        <span class="tag tag--led">Voyants LED</span>
+        <span class="tag tag--led">Voyant de charge</span>
         <span class="tag tag--mwh">3 400 mWh</span>
         <span class="tag tag--usb"><svg class="ico ico--sm" aria-hidden="true"><use href="#i-zap"/></svg> USB-C</span>
       </div>
@@ -156,8 +157,8 @@
 
   <div class="ticker" aria-hidden="true">
     <div class="ticker__track">
-      <span>Recharge USB-C</span><i></i><span>1,5 V</span><i></i><span>3 400 mWh</span><i></i><span>Lithium-ion</span><i></i><span>Arrêt automatique</span><i></i><span>Voyants LED</span><i></i>
-      <span>Recharge USB-C</span><i></i><span>1,5 V</span><i></i><span>3 400 mWh</span><i></i><span>Lithium-ion</span><i></i><span>Arrêt automatique</span><i></i><span>Voyants LED</span><i></i>
+      <span>Recharge USB-C</span><i></i><span>1,5 V</span><i></i><span>3 400 mWh</span><i></i><span>Lithium-ion</span><i></i><span>Arrêt automatique</span><i></i><span>1 200 recharges</span><i></i>
+      <span>Recharge USB-C</span><i></i><span>1,5 V</span><i></i><span>3 400 mWh</span><i></i><span>Lithium-ion</span><i></i><span>Arrêt automatique</span><i></i><span>1 200 recharges</span><i></i>
     </div>
   </div>
 
@@ -180,7 +181,7 @@
         <article class="card">
           <span class="card__icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
           <h3>Intelligent et sûr</h3>
-          <p>Un voyant par pile sur le couvercle. La charge s'arrête toute seule quand la pile est pleine ou défectueuse.</p>
+          <p>Le voyant du couvercle montre la charge. Elle s'arrête toute seule quand la pile est pleine ou défectueuse.</p>
         </article>
         <article class="card">
           <span class="card__icon"><svg aria-hidden="true"><use href="#i-leaf"/></svg></span>
@@ -238,13 +239,13 @@
         </li>
         <li class="step">
           <span class="step__num">2</span>
-          <h3>Branchez un câble USB-C</h3>
+          <h3>Branchez le câble USB-C fourni</h3>
           <p>Sur le chargeur de votre téléphone, un ordinateur ou une batterie externe.</p>
         </li>
         <li class="step">
           <span class="step__num">3</span>
-          <h3>Suivez les voyants</h3>
-          <p>Chaque pile a son voyant. Le boîtier s'arrête tout seul quand c'est plein.</p>
+          <h3>Suivez le voyant</h3>
+          <p>Le voyant du couvercle montre la charge. Le boîtier s'arrête tout seul quand c'est plein.</p>
         </li>
       </ol>
 
@@ -305,11 +306,12 @@
             <tr><th scope="row">Produit</th><td>Boîtier de charge intelligent + piles AA rechargeables</td></tr>
             <tr><th scope="row">Marque</th><td>PUJIMAX</td></tr>
             <tr><th scope="row">Technologie</th><td>Lithium-ion</td></tr>
-            <tr><th scope="row">Tension</th><td>1,5 V</td></tr>
+            <tr><th scope="row">Tension</th><td>1,5 V constante</td></tr>
             <tr><th scope="row">Capacité</th><td>3 400 mWh par pile</td></tr>
             <tr><th scope="row">Format</th><td>AA, la taille standard (pas les petites AAA)</td></tr>
-            <tr><th scope="row">Recharge</th><td>Port USB-C</td></tr>
-            <tr><th scope="row">Sécurité</th><td>Voyant par pile, arrêt automatique</td></tr>
+            <tr><th scope="row">Recharge</th><td>Port USB-C (5 V / 3 A), câble fourni</td></tr>
+            <tr><th scope="row">Durée de vie</th><td>Jusqu'à 1 200 recharges (donnée fabricant)</td></tr>
+            <tr><th scope="row">Sécurité</th><td>Voyant de charge, arrêt automatique</td></tr>
           </tbody>
         </table>
       </div>
@@ -317,16 +319,41 @@
         <h3>Dans le pack</h3>
         <ul class="checklist">
           <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> <span>1 boîtier de charge intelligent USB-C</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> <span>1 câble USB-C</span></li>
           <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg> <span><span data-piles>4</span> piles AA rechargeables lithium 1,5 V</span></li>
         </ul>
         <p class="box__price"><span data-prix>20 000</span> FCFA</p>
+        <p class="box__note">Livraison incluse partout à Bamako</p>
         <a class="btn btn--dark btn--block" href="#commander"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Je commande</a>
       </aside>
     </div>
   </section>
 
-  <!-- Section « Photos réelles » retirée en attendant les photos du produit PUJIMAX (Miya).
-       Les styles .gallery sont gardés dans styles.css pour la remettre. -->
+  <!-- ============ PHOTOS ============ -->
+  <section id="photos" class="section">
+    <div class="container">
+      <p class="eyebrow">Photos réelles</p>
+      <h2>Le produit, tel que vous le recevez</h2>
+      <div class="gallery">
+        <figure>
+          <img src="img/boitier-ouvert.webp" width="800" height="800" loading="lazy" decoding="async" alt="Boîtier de charge PUJIMAX ouvert, intérieur jaune, avec quatre piles AA en place">
+          <figcaption>Le boîtier ouvert, 4 piles en place</figcaption>
+        </figure>
+        <figure>
+          <img src="img/pack-complet.webp" width="800" height="800" loading="lazy" decoding="async" alt="Le pack complet&nbsp;: boîtier PUJIMAX posé sur sa boîte, à côté du câble USB-C">
+          <figcaption>Le pack complet</figcaption>
+        </figure>
+        <figure>
+          <img src="img/boite.webp" width="800" height="800" loading="lazy" decoding="async" alt="Boîte PUJIMAX AA 1,5 V Rechargeable Lithium-ion Battery Charger Set">
+          <figcaption>La boîte PUJIMAX</figcaption>
+        </figure>
+        <figure>
+          <img src="img/cable-usb-c.webp" width="800" height="800" loading="lazy" decoding="async" alt="Câble USB-A vers USB-C noir fourni dans le pack">
+          <figcaption>Câble USB-C fourni</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 
   <!-- ============ COMMANDER ============ -->
   <section id="commander" class="section section--yellow">
@@ -403,11 +430,15 @@
       <div class="faq">
         <details>
           <summary>Avec quoi je recharge le boîtier&nbsp;?<svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
-          <p>Avec n'importe quel câble USB-C&nbsp;: le chargeur de votre téléphone, un ordinateur ou une batterie externe (powerbank). Pratique pendant les coupures de courant.</p>
+          <p>Avec le câble USB-C fourni, branché sur le chargeur de votre téléphone, un ordinateur ou une batterie externe (powerbank). Pratique pendant les coupures de courant.</p>
         </details>
         <details>
           <summary>Ces piles marchent dans mes appareils&nbsp;?<svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
           <p>Oui. Ce sont des piles AA standard de 1,5 V, le même format que les piles jetables classiques (LR6). Elles vont partout où vont les piles AA.</p>
+        </details>
+        <details>
+          <summary>Je peux recharger mes piles jetables dedans&nbsp;?<svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+          <p>Non, jamais. Le boîtier recharge uniquement les piles AA lithium rechargeables de 1,5&nbsp;V, comme celles du pack. Recharger une pile jetable peut la faire couler ou chauffer.</p>
         </details>
         <details>
           <summary>Ça marche avec les petites piles AAA&nbsp;?<svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
@@ -415,15 +446,15 @@
         </details>
         <details>
           <summary>Combien de fois peut-on les recharger&nbsp;?<svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
-          <p>Des centaines de fois. C'est pour ça qu'un seul pack remplace des centaines de piles jetables.</p>
+          <p>Jusqu'à 1 200 fois d'après le fabricant. C'est pour ça qu'un seul pack remplace des centaines de piles jetables.</p>
         </details>
         <details>
           <summary>Comment je sais que les piles sont chargées&nbsp;?<svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
-          <p>Chaque pile a son voyant sur le couvercle. Le boîtier coupe la charge tout seul quand la pile est pleine, ou si elle est défectueuse.</p>
+          <p>Le voyant du couvercle montre la charge. Le boîtier coupe la charge tout seul quand la pile est pleine, ou si elle est défectueuse.</p>
         </details>
         <details>
           <summary>Vous livrez où&nbsp;?<svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
-          <p>Partout à Bamako, et pour le moment uniquement à Bamako.</p>
+          <p>Partout à Bamako, et la livraison est incluse dans le prix. Pour le moment, nous livrons uniquement à Bamako.</p>
         </details>
         <details>
           <summary>Comment je paie&nbsp;?<svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
@@ -455,7 +486,7 @@
 
 <!-- Barre de commande fixe (mobile) -->
 <div class="sticky-cta" id="sticky-cta" aria-hidden="true">
-  <p class="sticky-cta__price"><span><span data-prix>20 000</span> FCFA</span><small>le pack · livraison à Bamako</small></p>
+  <p class="sticky-cta__price"><span><span data-prix>20 000</span> FCFA</span><small>livraison incluse à Bamako</small></p>
   <a class="btn btn--sm" href="#commander" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Commander</a>
 </div>
 
