@@ -1,4 +1,4 @@
-# Pile Oussou — page de vente
+# Batteries Bamako — page de vente
 
 Page de vente d'un pack « boîtier de charge USB-C + 4 piles AA rechargeables lithium » (PUJIMAX, 3 400 mWh), vendu à Bamako (Mali).
 Commande via WhatsApp, livraison incluse à Bamako, paiement à la livraison ou par Orange Money.
@@ -20,7 +20,6 @@ const CONFIG = {
 
 ## Encore provisoire
 
-- Le nom « Pile Oussou » et le logo (le client hésite entre BatteryMali, MaliPower, Batteries Bamako).
 - L'image d'aperçu `img/og-image.jpg` affiche le nom et le prix : à refaire s'ils changent.
 
 Les photos du produit (dossier `img/`) ont été détourées et retouchées à partir des photos envoyées par Miya
@@ -28,7 +27,7 @@ Les photos du produit (dossier `img/`) ont été détourées et retouchées à p
 
 ## Propositions de logos
 
-`logos.html` (non liée depuis la page de vente) présente 3 idées de logo : BatteryMali, MaliPower, Batteries Bamako.
+`logos.html` (non liée depuis la page de vente) présente les 3 idées de logo proposées. Le client a choisi **Batteries Bamako** (badge vert avec une pile AA).
 
 ## Voir le site en local
 
