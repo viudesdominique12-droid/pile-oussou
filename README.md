@@ -3,7 +3,7 @@
 Page de vente d'un pack « boîtier de charge USB-C + 4 piles AA rechargeables lithium » (PUJIMAX, 3 400 mWh), vendu à Bamako (Mali).
 Commande via WhatsApp, livraison incluse à Bamako, paiement à la livraison ou par Orange Money.
 
-Site statique (HTML, CSS, JavaScript), sans outil de compilation. En ligne sur GitHub Pages : https://viudesdominique12-droid.github.io/pile-oussou/
+Site statique (HTML, CSS, JavaScript), sans outil de compilation. En ligne sur GitHub Pages : https://sugumall.com/ (domaine acheté chez Cloudflare, le fichier `CNAME` le déclare à GitHub)
 
 ## Modifier le prix, le numéro WhatsApp ou le nombre de piles
 
