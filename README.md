@@ -1,6 +1,6 @@
-# Batteries Bamako — page de vente
+# Sugu Mall — page de vente
 
-Page de vente d'un pack « boîtier de charge USB-C + 4 piles AA rechargeables lithium » (PUJIMAX, 3 400 mWh), vendu à Bamako (Mali).
+Sugu Mall, le marché en ligne de Bamako. Premier produit : page de vente d'un pack « boîtier de charge USB-C + 4 piles AA rechargeables lithium » (PUJIMAX, 3 400 mWh), vendu à Bamako (Mali).
 Commande via WhatsApp, livraison incluse à Bamako, paiement à la livraison ou par Orange Money.
 
 Site statique (HTML, CSS, JavaScript), sans outil de compilation. En ligne sur GitHub Pages : https://sugumall.com/ (domaine acheté chez Cloudflare, le fichier `CNAME` le déclare à GitHub)
@@ -20,14 +20,18 @@ const CONFIG = {
 
 ## Encore provisoire
 
-- L'image d'aperçu `img/og-image.jpg` affiche le nom et le prix : à refaire s'ils changent.
+- L'image d'aperçu `img/og-sugu-mall.jpg` affiche le prix : à refaire s'il change (voir plus bas).
 
-Les photos du produit (dossier `img/`) ont été détourées et retouchées à partir des photos envoyées par Miya
-(fond studio uni, balance des blancs, contraste). Les versions grand format sont dans `../photos-retouchees/` (hors dépôt).
+## Images et logo
 
-## Propositions de logos
+Les images du produit (`img/boitier-studio.webp`, `img/pack-studio.webp`) sont des images studio faites par IA
+à partir des photos du vrai produit, comme sur les pubs Facebook. Les photos envoyées par Miya servent de preuve
+et ne vont pas sur le site.
 
-`logos.html` (non liée depuis la page de vente) présente les 3 idées de logo proposées. Le client a choisi **Batteries Bamako** (badge vert avec une pile AA).
+Le logo `img/logo-sugu-mall.svg` (4 carrés en couleur, nom vert) s'affiche toujours sur fond blanc.
+
+Images, favicon et aperçu de partage se refont avec `python site_sugu_mall.py`
+dans `../visuels-pubs/sources/` (hors dépôt).
 
 ## Voir le site en local
 

@@ -1,5 +1,5 @@
 /* =========================================================
-   Batteries Bamako — réglages de la page
+   Sugu Mall — réglages de la page
    Tout le site se met à jour à partir de ces lignes.
    ========================================================= */
 const CONFIG = {
@@ -33,7 +33,7 @@ const CONFIG = {
   $$("[data-prix]").forEach((el) => (el.textContent = fcfa(CONFIG.prix)));
   $$("[data-piles]").forEach((el) => (el.textContent = CONFIG.nbPiles));
   $$("[data-wa]").forEach((el) => {
-    el.href = waLink(`Bonjour Batteries Bamako ! J'ai une question sur le ${CONFIG.produit}.`);
+    el.href = waLink(`Bonjour Sugu Mall ! J'ai une question sur le ${CONFIG.produit}.`);
     el.target = "_blank";
     el.rel = "noopener";
   });
@@ -139,7 +139,7 @@ const CONFIG = {
     const data = new FormData(form);
     const note = String(data.get("note") || "").trim();
     const lignes = [
-      "Bonjour Batteries Bamako ! Je veux commander :",
+      "Bonjour Sugu Mall ! Je veux commander :",
       `• ${n} × ${CONFIG.produit} (${CONFIG.nbPiles} piles)`,
       `• Total : ${fcfa(n * CONFIG.prix)} FCFA`,
       "",
