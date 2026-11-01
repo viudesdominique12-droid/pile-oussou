@@ -18,9 +18,20 @@ const CONFIG = {
 };
 ```
 
+Si le prix ou le numéro change, mettre aussi à jour la fiche pour Google (bloc `application/ld+json`
+dans le `<head>` de `index.html`) : `main.js` ne la modifie pas.
+
 ## Encore provisoire
 
 - L'image d'aperçu `img/og-sugu-mall.jpg` affiche le prix : à refaire s'il change (voir plus bas).
+
+## Référencement (Google, Bing)
+
+- `robots.txt` autorise tout et donne l'adresse de `sitemap.xml`.
+- `sitemap.xml` liste les pages : en ajouter une ligne à chaque nouvelle page, et changer `lastmod` quand une page change.
+- L'adresse officielle est `https://sugumall.com/` (balise `canonical`) ; www et l'ancienne adresse github.io redirigent dessus.
+- Le site est déclaré dans Google Search Console (propriété « Domaine », vérifiée par un enregistrement TXT chez Cloudflare)
+  et dans Bing Webmaster Tools.
 
 ## Images et logo
 

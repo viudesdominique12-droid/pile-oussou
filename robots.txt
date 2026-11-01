@@ -1,0 +1,6 @@
+# sugumall.com : tout le site est public et peut être exploré.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://sugumall.com/sitemap.xml

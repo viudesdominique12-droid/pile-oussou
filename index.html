@@ -3,27 +3,89 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Sugu Mall — Piles AA rechargeables USB-C</title>
-  <meta name="description" content="Boîtier de charge intelligent USB-C + 4 piles AA rechargeables au lithium PUJIMAX. 20 000 F, livraison incluse à Bamako, commande sur WhatsApp.">
+  <title>Sugu Mall — Piles AA rechargeables USB-C livrées à Bamako</title>
+  <meta name="description" content="Sugu Mall, le marché en ligne de Bamako : boîtier de charge USB-C + 4 piles AA rechargeables PUJIMAX. 20 000 F, livraison incluse, commande sur WhatsApp.">
+  <link rel="canonical" href="https://sugumall.com/">
   <meta name="theme-color" content="#141412">
 
   <!-- Aperçu quand le lien est partagé sur WhatsApp / Facebook.
        Si le site change d'adresse (nom de domaine), mettre à jour og:url et og:image. -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Sugu Mall">
   <meta property="og:url" content="https://sugumall.com/">
   <meta property="og:title" content="Fini les piles jetables — Sugu Mall">
   <meta property="og:description" content="Boîtier de charge USB-C + 4 piles AA rechargeables. 20 000 F, livraison incluse à Bamako.">
   <meta property="og:image" content="https://sugumall.com/img/og-sugu-mall.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sugu Mall : boîtier de charge USB-C et 4 piles AA rechargeables, 20 000 F livraison incluse à Bamako">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fiche pour Google (nom du site, boutique, produit).
+       Si le prix, le numéro WhatsApp ou le stock changent, les mettre à jour ici aussi (main.js ne touche pas ce bloc). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://sugumall.com/#site",
+        "url": "https://sugumall.com/",
+        "name": "Sugu Mall",
+        "alternateName": ["sugumall", "sugumall.com"],
+        "inLanguage": "fr",
+        "publisher": { "@id": "https://sugumall.com/#boutique" }
+      },
+      {
+        "@type": "OnlineStore",
+        "@id": "https://sugumall.com/#boutique",
+        "name": "Sugu Mall",
+        "alternateName": "sugumall",
+        "url": "https://sugumall.com/",
+        "logo": "https://sugumall.com/img/logo-sugu-mall-carre.png",
+        "image": "https://sugumall.com/img/og-sugu-mall.jpg",
+        "description": "Sugu Mall, le marché en ligne de Bamako. Commande sur WhatsApp, livraison partout à Bamako, paiement à la livraison ou par Orange Money.",
+        "telephone": "+22391026406",
+        "address": { "@type": "PostalAddress", "addressLocality": "Bamako", "addressCountry": "ML" },
+        "areaServed": { "@type": "City", "name": "Bamako" },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+22391026406",
+          "url": "https://wa.me/22391026406",
+          "areaServed": "ML",
+          "availableLanguage": "fr"
+        },
+        "sameAs": ["https://www.facebook.com/profile.php?id=61595785272028"]
+      },
+      {
+        "@type": "Product",
+        "@id": "https://sugumall.com/#pack",
+        "name": "Pack boîtier de charge USB-C + 4 piles AA rechargeables PUJIMAX",
+        "description": "Boîtier de charge intelligent USB-C, 4 piles AA rechargeables lithium 1,5 V (3 400 mWh, jusqu'à 1 200 recharges) et câble USB-C. Livraison incluse à Bamako.",
+        "image": ["https://sugumall.com/img/boitier-studio.webp", "https://sugumall.com/img/pack-studio.webp"],
+        "brand": { "@type": "Brand", "name": "PUJIMAX" },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://sugumall.com/",
+          "price": "20000",
+          "priceCurrency": "XOF",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": { "@id": "https://sugumall.com/#boutique" }
+        }
+      }
+    ]
+  }
+  </script>
 
   <link rel="icon" href="img/favicon.svg?v=3" type="image/svg+xml">
   <link rel="preload" as="image" href="img/boitier-studio.webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;1,800&family=Barlow:wght@400;600&display=swap">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
   <script>
     // Active les animations ; si main.js ne se charge pas, on réaffiche tout.
     document.documentElement.classList.add("js");
@@ -84,8 +146,7 @@
   <section class="hero">
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="container hero__grid">
-      <p class="hero__tag" data-reveal>Bamako · Livraison incluse</p>
-      <h1 data-reveal style="--i:1">Fini les piles <span class="hl">jetables</span></h1>
+      <h1 data-reveal><span class="hero__tag">Sugu Mall · Bamako · Livraison incluse</span> Fini les piles <span class="hl">jetables</span></h1>
 
       <div class="hero__media">
         <img class="hero__img" id="hero-img" src="img/boitier-studio.webp" width="760" height="650" alt="Boîtier de charge PUJIMAX ouvert, intérieur jaune, avec quatre piles AA en place" fetchpriority="high">
@@ -492,7 +553,7 @@
   <div class="container site-footer__inner">
     <div>
       <a class="logo" href="#" aria-label="Sugu Mall, retour en haut"><img src="img/logo-sugu-mall.svg" width="123" height="30" alt=""></a>
-      <p>Le marché en ligne de Bamako. En ce moment&nbsp;: piles AA rechargeables, livrées chez vous.</p>
+      <p>Sugu Mall, le marché en ligne de Bamako. En ce moment&nbsp;: piles AA rechargeables, livrées chez vous.</p>
     </div>
     <a class="btn btn--white" data-wa href="#commander"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Nous écrire sur WhatsApp</a>
   </div>

@@ -210,7 +210,8 @@ h3 {
     radial-gradient(420px 300px at 0% 0%, rgba(43, 168, 74, .12), transparent 70%);
 }
 .hero__grid { position: relative; display: grid; gap: 14px; }
-.hero__tag { color: var(--yellow); font: 600 13px/1.2 var(--font-cond); letter-spacing: .22em; text-transform: uppercase; }
+/* Petite ligne au-dessus du grand titre, dans le h1 (le nom Sugu Mall doit être dans le titre pour Google) */
+.hero__tag { display: block; margin-bottom: 14px; color: var(--yellow); font: 600 13px/1.2 var(--font-cond); letter-spacing: .22em; text-transform: uppercase; }
 .hero__lead { color: #CFCFC8; font-size: 15.5px; max-width: 38ch; margin-top: 8px; }
 
 .hero__media { position: relative; justify-self: center; width: min(76%, 320px); margin: 2px 0 -46px; z-index: 0; }
@@ -639,11 +640,11 @@ h3 {
     align-content: center; min-height: min(640px, calc(100svh - var(--header-h) - 160px));
   }
   .hero__grid > * { grid-column: 1; }
-  .hero__tag { grid-row: 1; }
-  .hero__grid h1 { grid-row: 2; }
-  .hero__lead { grid-row: 3; font-size: 19px; margin: 0; }
-  .hero__ticket { grid-row: 4; max-width: 470px; }
-  .hero__media { grid-column: 2; grid-row: 1 / span 5; align-self: center; width: min(100%, 500px); margin: 0; }
+  .hero__tag { margin-bottom: 18px; }
+  .hero__grid h1 { grid-row: 1; }
+  .hero__lead { grid-row: 2; font-size: 19px; margin: 0; }
+  .hero__ticket { grid-row: 3; max-width: 470px; }
+  .hero__media { grid-column: 2; grid-row: 1 / span 4; align-self: center; width: min(100%, 500px); margin: 0; }
   .sign--a { left: -6%; }
   .sign--b { right: -6%; }
   .stats { margin-top: 56px; }
